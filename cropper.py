@@ -7,6 +7,7 @@ FILENAME = 'dl'
 START_TIME = 0
 END_TIME = 10
 FPS = 15
+RES = "1080p"
 # -------- #
 
 
@@ -16,7 +17,7 @@ def download_video(url, filename):
     :param filename: Set a file name for the video
     """
     youtube = pytube.YouTube(url)
-    video = youtube.streams.first()
+    video = youtube.streams.filter(res=RES).first()
     video.download(filename=f"{filename}_ORIGINAL")
 
 
