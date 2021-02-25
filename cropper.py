@@ -18,7 +18,7 @@ def download_video(url, filename):
     :param filename: Set a file name for the video
     """
     youtube = pytube.YouTube(url)
-    video = youtube.streams.filter(res=RES).first()
+    video = youtube.streams.filter(resolution=RES).first()
     video.download(filename=f"{filename}_ORIGINAL")
 
 
