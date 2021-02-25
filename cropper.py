@@ -7,7 +7,8 @@ FILENAME = 'dl'
 START_TIME = 0
 END_TIME = 10
 FPS = 15
-RES = "1080p"
+RES = "2160p"
+# miqhtie is stupid 
 # -------- #
 
 
